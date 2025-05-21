@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUTSTORE</title>
+    <link rel="stylesheet" href="style-account.css">
+    <link rel="icon" type="image/x-icon" href="mini-icon.png">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" />
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Domů</a>
+                </li>
+                <li>
+                    <a href="store.html">Obchod</a>
+                </li>
+                <li class="active">
+                    <a href="account.html">Účet</a>
+                </li>
+                <li>
+                    <a href="review.html">Recenze</a>
+                </li>
+                <li>
+                    <a href="contact.html">Kontakt</a>
+                </li>
+                <li>
+                    <a href="faq.html">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <form action="account.html" method="post">
+            <input type="text" name="Jméno" placeholder="Uživatelské jméno">
+            <input type="email" name="E-mailová adresa" placeholder="E-mail">
+            <input type="password" name="Heslo" placeholder="Heslo">
+            <select>
+                <option value="cz">Česká Republika</option>
+                <option value="sk">Slovensko</option>
+                <option value="de">Německo</option>
+                <option value="pl">Polsko</option>
+            </select>
+            <input type="submit" value="Registrovat">
+        </form>
+    </div>
+    <footer>
+        &copy; 2025 RUTSTORE - <a href="contact.html">Kontakt</a> | <a href="faq.html">FAQ</a>
+    </footer>
+</body>
+
+</html>
