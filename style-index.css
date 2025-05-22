@@ -28,6 +28,8 @@ header {
   width: 100%;
   z-index: 1000;
   border-bottom: solid 2px #1d1d1d;
+  min-height: 60px;
+  overflow-x: auto;
 }
 
 .logo {
@@ -41,11 +43,16 @@ ul {
   display: flex;
   background-color: transparent;
   margin-left: auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 li {
   float: none;
   margin-left: 10px;
+  white-space: nowrap;
 }
 
 li a {
@@ -81,10 +88,11 @@ li a:hover {
   align-items: center;
   justify-content: center;
 }
+
 .main-index h1 {
-    background-image: radial-gradient(white, rgb(39, 39, 39));
-    color: transparent;
-    background-clip: text;
+  background-image: radial-gradient(white, rgb(39, 39, 39));
+  color: transparent;
+  background-clip: text;
 }
 
 @keyframes main {
@@ -97,5 +105,70 @@ li a:hover {
     right: 0px;
     top: 0px;
     opacity: 1;
+  }
+}
+
+/* === Responsive Styles === */
+
+/* Tablets (portrait and smaller) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 0.5em;
+  }
+
+  .main-index {
+    font-size: 2.5rem;
+    height: auto;
+    padding: 2em 1em;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  header {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.3em 0.5em;
+    min-height: 50px;
+    overflow-x: auto;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  ul {
+    width: auto;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-top: 0.3em;
+    gap: 4px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  li {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  li a {
+    width: auto;
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .main-index {
+    font-size: 2rem;
+    flex-direction: column;
+    padding: 2em 1em;
+  }
+
+  .main-index h1 {
+    text-align: center;
   }
 }
