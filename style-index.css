@@ -3,11 +3,16 @@
 }
 
 .container {
-  width: auto;
-  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  padding: 1em;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 body {
@@ -108,9 +113,8 @@ li a:hover {
   }
 }
 
-/* === Responsive Styles === */
+/* Responzivita */
 
-/* Tablets (portrait and smaller) */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
@@ -124,7 +128,7 @@ li a:hover {
   }
 }
 
-/* Mobile Phones */
+/* Mobil */
 @media (max-width: 480px) {
   header {
     flex-direction: row;
