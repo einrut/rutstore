@@ -115,7 +115,6 @@ footer > a {
   color: white;
 }
 
-/* === Responsive Layout === */
 
 @media (max-width: 1024px) {
   .container {
@@ -135,7 +134,7 @@ footer > a {
   }
 
   .product {
-    width: 90%;
+    width: 75%;
     margin: 1em 0;
   }
 
