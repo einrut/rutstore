@@ -70,6 +70,15 @@ li a:hover {
     border-radius: 20px;
 }
 
+.view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* doplnit */
+    gap: 2em;
+    padding: 3em;
+    justify-items: center;
+    align-items: start;
+}
+
 .product {
     border-radius: 20px;
     animation: appear linear;
@@ -77,22 +86,64 @@ li a:hover {
     animation-range: entry 0% cover 40%;
     border: solid black 2px;
     padding: 1.5em;
-    margin: 3em;
-    width: 200px;
+    width: 100%;
+    max-width: 300px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: white;
     box-shadow: 6px 6px rgba(0, 0, 0, 0.3);
-    float: left;
     aspect-ratio: 3/4;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    justify-content: space-between;
 }
 
 .product:hover {
     transform: translateY(-12px);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
+
+.product img {
+    max-width: 100%;
+    height: 250px;
+    width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-description p {
+    margin: 0;
+}
+
+.buy-button {
+    background-color: #17641c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    width: 80%;
+    max-width: 200px;
+}
+
+.buy-button:hover {
+    background-color: #1a7a20;
+}
+
 
 @keyframes appear {
     from {
@@ -106,7 +157,13 @@ li a:hover {
     }
 }
 
-/* responozivitatatata */
+/* responzivita */
+@media (max-width: 900px) {
+    .view {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 2em;
+    }
+}
 
 @media (max-width: 610px) {
     header {
@@ -135,9 +192,13 @@ li a:hover {
         padding: 10px;
     }
 
-    .product {
-        width: 70%;
-        margin: 2em auto;
+    .view {
+        grid-template-columns: 1fr;
         padding: 1em;
+    }
+
+    .product {
+        width: 90%;
+        margin: 0 auto;
     }
 }
