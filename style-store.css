@@ -138,10 +138,16 @@ li a:hover {
     font-weight: bold;
     width: 80%;
     max-width: 200px;
+    box-shadow: 0 6px #124d16;
 }
 
 .buy-button:hover {
     background-color: #1a7a20;
+}
+
+.buy-button:active {
+    box-shadow: 0 2px #0c340f;
+    transform: translateY(4px);
 }
 
 
